@@ -1,10 +1,10 @@
 ###########
 # site.title
 
-title: ET-Jekyll Theme
+title: notes.lochana
 description: A minimal Jekyll theme inspired by Tufte CSS
-url: "https://et-jekyll.netlify.app"
-host: 0.0.0.0
+url: "https://fivetwentythree.github.io"
+baseurl: "/blog-jekyll"
 
 
 #########################
@@ -28,7 +28,7 @@ sass:
 baseurl: ""
 permalink: pretty
 timezone: America/New_York
-future: false
+future: true
 
 exclude:
 - README.md
