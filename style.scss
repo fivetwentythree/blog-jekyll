@@ -50,8 +50,8 @@ html {
 
 body {
     -webkit-font-smoothing: antialiased;
-    background: #02126f;
-    color: #ffffff;
+    background: #ffffff;
+    color: #111111;
     counter-reset: sidenote-counter;
     font: 1.4rem/2rem "et-book", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
     height: 100%;
@@ -89,10 +89,10 @@ p {
 }
 
 a,a:visited {
-    color: #ffffff;
+    color: #111111;
 
     &:hover {
-        color: rgb(245, 189, 2);
+        color: #666666;
     }
 }
 
@@ -117,7 +117,7 @@ figure {
 }
 
 hr {
-    background: #ffffff;
+    background: #111111;
     border: 0;
     height: 1px;
     margin: 4rem 0;
@@ -161,7 +161,7 @@ table {
     }
 
     thead th {
-        border-bottom: 1px solid #ffffff;
+        border-bottom: 1px solid #111111;
     }
 }
 
@@ -362,14 +362,7 @@ nav {
 
 }
 
-/* Dark Mode */
-/* Removing dark mode feature
-@media (prefers-color-scheme: dark) {
-    body{background:#191919;filter:invert(1);}
-    .highlight{border-color: grey !important;}
-    img,iframe,.highlight,a:hover,a:focus{filter:invert(1);}
-}
-*/
+
 h2.title {
     text-transform: none;
 }
