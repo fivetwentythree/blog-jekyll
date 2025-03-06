@@ -25,7 +25,6 @@ sass:
   sass_dir: css
   style:    compressed
 
-baseurl: ""
 permalink: pretty
 timezone: America/New_York
 future: true
