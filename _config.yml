@@ -3,8 +3,8 @@
 
 title: notes.lochana
 description: A minimal Jekyll theme inspired by Tufte CSS
-url: "https://fivetwentythree.github.io/blog-jekyll"
-baseurl: ""
+url: "https://fivetwentythree.github.io"
+baseurl: "/blog-jekyll"
 
 
 #########################
