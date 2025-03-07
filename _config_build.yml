@@ -1,0 +1,50 @@
+# Jekyll build configuration for production
+
+# Enable compression plugin
+compression: true
+
+# Enable asset pipeline
+assets:
+  compression: true
+  sources:
+    - _assets/css
+    - _assets/js
+    - _assets/images
+  features:
+    automatic_img_size: true
+    automatic_img_alt: true
+
+# Optimize HTML output
+keep_files:
+  - .git
+  - .svn
+keep_html_extension: true
+remove_trailing_slash: false
+
+# Minify HTML output
+compression_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: [html, head, body]
+
+# Enable caching
+cache:
+  type: memory
+  enabled: true
+
+# Configure source maps
+sass:
+  style: compressed
+  sourcemap: none
+
+# Configure image optimization
+image_optim:
+  archive: false
+  svgo: false
+  pngout: false
+  verbose: false

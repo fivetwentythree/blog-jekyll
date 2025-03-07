@@ -7,11 +7,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ page.title }} | {{ site.title }}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Performance optimizations -->
+    <link rel="preload" href="{{ site.baseurl }}/style.css" as="style">
+    <link rel="preload" href="{{ site.baseurl }}/fonts/et-book-roman-line-figures.woff" as="font" type="font/woff" crossorigin>
+    
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    
+    <!-- Favicon -->
     <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
     <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
+    
+    <!-- RSS and canonical -->
     <link href='{{ site.baseurl }}/feed.xml' rel='alternate' type='application/atom+xml'>
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
-    <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+    
+    <!-- Critical CSS inline (you would need to extract critical CSS) -->
+    <style>
+        /* Add critical CSS here */
+        body { margin: 0; }
+        main { display: block; }
+    </style>
+    
+    <!-- Non-critical CSS with media attribute -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="{{ site.baseurl }}/style.css"></noscript>
 </head>
 
 <body>
