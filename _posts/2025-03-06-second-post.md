@@ -26,7 +26,7 @@ His screenplay of 159 pages was completed in May 1993. “On the cover, Quentin 
 
 “Not at all,” she replies. However, she did go on to be the unit photographer on the film.
 
-When _Pulp Fiction_ thundered into theaters a year later, Stanley Crouch in the _Los Angeles Times_ called it “a high point in a low age.” _Time_ declared, “It hits you like a shot of adrenaline straight to the heart.” In _Entertainment Weekly,_ Owen Gleiberman said it was “nothing less than the reinvention of mainstream American cinema.”
+When _Pulp Fiction_ thundered into theaters a year later, Stanley Crouch in the _Los Angeles Times_ called it “a high point in a low age.” _Time_ declared, “It hits you like a shot of adrenaline straight to the heart.” In _Entertainment Weekly,_ Owen Gleiberman said it was “nothing less than the reinvention of mainstream American cinema.”![this is a test](/blog-jekyll/assets/images/image1.jpg)
 
 Made for $8.5 million, it earned $214 million worldwide, making it the top-grossing independent film at the time. Roger Ebert called it “the most influential” movie of the 1990s, “so well-written in a scruffy, fanzine way that you want to rub noses in it—the noses of those zombie writers who take ‘screenwriting’ classes that teach them the formulas for ‘hit films.’ ”
 

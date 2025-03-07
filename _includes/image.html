@@ -1,0 +1,36 @@
+<figure class="image-container">
+    {% if include.url %}
+    <img src="{{ include.url }}" 
+         alt="{{ include.alt | default: 'Image' }}" 
+         {% if include.width %}width="{{ include.width }}"{% endif %}
+         {% if include.height %}height="{{ include.height }}"{% endif %}
+         loading="lazy">
+    {% endif %}
+    {% if include.caption %}
+    <figcaption class="image-caption">{{ include.caption }}</figcaption>
+    {% endif %}
+</figure>
+
+<style>
+.image-container {
+    position: relative;
+    width: 100%;
+    margin: 2em 0;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-caption {
+    margin-top: 0.5em;
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+}
+</style>
