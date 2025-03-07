@@ -6,6 +6,27 @@ description: A minimal Jekyll theme inspired by Tufte CSS
 url: "https://fivetwentythree.github.io"
 baseurl: "/blog-jekyll"
 
+# Media hosting configuration
+cloudinary:
+  cloud_name: your-cloud-name
+  api_key: your-api-key
+  api_secret: your-api-secret
+  enhance_image_tag: true
+  static_file_support: true
+
+archive_org:
+  collection_id: your-archive-id
+
+# Media performance settings
+media:
+  lazy_loading: true
+  progressive_loading: true
+  responsive_images: true
+  cache_headers:
+    max_age: 31536000
+    s_maxage: 31536000
+    public: true
+
 
 #########################
 # more settings
