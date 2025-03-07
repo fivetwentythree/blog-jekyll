@@ -1,9 +1,28 @@
 <div class="video-container">
     {% if include.url %}
+    {% if include.url contains 'vimeo.com' or include.url contains 'dailymotion.com' or include.url contains 'youtube.com' or include.url contains 'youtu.be' %}
+    <div class="video-wrapper">
+        {% if include.url contains 'vimeo.com' %}
+        {% assign video_id = include.url | split: '/' | last %}
+        <iframe src="https://player.vimeo.com/video/{{ video_id }}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="{{ include.caption | default: 'Video player' }}"></iframe>
+        {% elsif include.url contains 'dailymotion.com' %}
+        {% assign video_id = include.url | split: '/' | last | split: '_' | first %}
+        <iframe src="https://www.dailymotion.com/embed/video/{{ video_id }}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="{{ include.caption | default: 'Video player' }}"></iframe>
+        {% elsif include.url contains 'youtube.com' or include.url contains 'youtu.be' %}
+        {% if include.url contains 'youtube.com' %}
+        {% assign video_id = include.url | split: 'v=' | last | split: '&' | first %}
+        {% else %}
+        {% assign video_id = include.url | split: '/' | last %}
+        {% endif %}
+        <iframe src="https://www.youtube.com/embed/{{ video_id }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="{{ include.caption | default: 'Video player' }}"></iframe>
+        {% endif %}
+    </div>
+    {% else %}
     <video controls preload="metadata" {% if include.poster %}poster="{{ include.poster }}"{% endif %}>
         <source src="{{ include.url }}" type="{{ include.type | default: 'video/mp4' }}">
         Your browser does not support the video tag.
     </video>
+    {% endif %}
     {% endif %}
     {% if include.caption %}
     <figcaption class="video-caption">{{ include.caption }}</figcaption>
@@ -15,6 +34,22 @@
     position: relative;
     width: 100%;
     margin: 2em 0;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 .video-container video {
